@@ -9,23 +9,28 @@
     <script src="https://kit.fontawesome.com/aa17b4b6b9.js" crossorigin="anonymous"></script>
   </head>
   <body>
-<nav>
-  <div class="nav-container">
-    <div class="nav-brand">
-      <i class="fas fa-cube"></i>
-      <span>N0va UI</span>
-    </div>
-    <ul class="nav-menu">
-      <li><a href="#home" class="active"><i class="fas fa-home"></i>首页</a></li>
-      <li><a href="#features"><i class="fas fa-star"></i>特性</a></li>
-      <li><a href="#docs"><i class="fas fa-book"></i>文档</a></li>
-      <li><a href="#demo"><i class="fas fa-gamepad"></i>演示</a></li>
-    </ul>
-    <div class="nav-actions">
-      <button id="theme-toggle"><i class="fas fa-moon"></i></button>
-    </div>
-  </div>
-</nav>
+    <nav>
+      <div class="nav-container">
+        <div class="nav-brand">
+          <i class="fas fa-cube"></i>
+          <span>N0va UI</span>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#home" class="active"><i class="fas fa-home"></i>首页</a></li>
+          <li><a href="#features"><i class="fas fa-star"></i>特性</a></li>
+          <li><a href="#docs"><i class="fas fa-book"></i>文档</a></li>
+          <li><a href="#demo"><i class="fas fa-gamepad"></i>演示</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+          <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </nav>
 
     <section id="home">
       <div id="title">
@@ -58,7 +63,6 @@
           <h1> <i class="fas fa-mobile-alt"></i>响应式设计</h1>
           <p> N0va UI 的组件是响应式的，可以在各种设备上完美显示。无论您是使用手机、平板还是电脑，N0va UI 都能提供一致的用户体验</p>
         </div>
-        </div>
       </div>
 
       <div class="feature">
@@ -66,7 +70,21 @@
           <h1><i class="fas fa-code"></i> 创建属于您自己的 N0va UI</h1>
           <p>N0va UI 的代码是开源的，您可以随时随地修改代码来获得属于您自己 N0va UI</p>
         </div>
+        <div>
+          <img src="img/feature-3.png" alt="Feature 3">
+        </div>
       </div>
     </section>
+
+    <script>
+      // 汉堡菜单交互
+      const navToggle = document.querySelector('.nav-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+
+      navToggle.addEventListener('click', () => {
+        navToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+    </script>
   </body>
 </html>
